@@ -1,0 +1,34 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px;
+    overflow: hidden;
+}
+
+.falling-leaves-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows leaves to be "under" other elements */
+}
+
+.falling-leaf {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #8B4513; /* Brown color for leaves */
+    border-radius: 50%;
+    pointer-events: none; /* Allows leaves to be "under" other elements */
+    animation: fallingLeaves 5s linear infinite;
+}
+
+@keyframes fallingLeaves {
+    0% {
+        transform: translate(0, -100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(calc(100vw * var(--randomX)), calc(100vh * var(--randomY)));
+        opacity: 1;
+    }
+}

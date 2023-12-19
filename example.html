@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="background-color:#907A31;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Puzzle Challenge</title>
+    <style>
+        @font-face {
+            font-family: 'YourCustomFont';
+            src: url('htmlpages/fonts/myfont2.ttf') format('truetype');
+        }
+        body {
+            font-family: 'YourCustomFont', sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-image: url('htmlpages/b.jpg');
+            background-position: center center;
+            
+        }
+        h1 {
+            color: #233a2d;
+        }
+        h2 {
+            color: #867111;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #917018;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .falling-leaves-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allows leaves to be "under" other elements */
+        }
+        .falling-leaf {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #8B4513; /* Brown color for leaves */
+            border-radius: 50%;
+            pointer-events: none; /* Allows leaves to be "under" other elements */
+            animation: fallingLeaves 5s linear infinite;
+        }
+        @keyframes fallingLeaves {
+            0% {
+                transform: translate(0, -100vh);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(calc(100vw * var(--randomX, 0)), calc(100vh * var(--randomY, 0)));
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hey Hey junia!</h1>
+    <p>Um dein Geschenk zu bekommen, musst du 3 fragen beantworten!</p>
+
+    <!-- Puzzle 1 -->
+    <h2>Ready?? (sag einfach "yes")</h2>
+    <input type="text" id="puzzle1Answer">
+    <button onclick="checkPuzzle1()">Submit</button>
+
+    <!-- Falling leaves container -->
+    <div class="falling-leaves-container">
+        <!-- You may dynamically generate falling leaves here using JavaScript -->
+        <div class="falling-leaf"></div>
+        <!-- Add more leaves as needed -->
+    </div>
+
+    <!-- Your existing script -->
+    <script src="javascript/script.js"></script>
+
+    <script>
+        function checkPuzzle1() {
+            var answer = document.getElementById('puzzle1Answer').value.toLowerCase();
+            if (answer === 'yes') {
+                alert('Correct! Great job!');
+                window.location.href = 'htmlpages/riddle1.html';
+            } else {
+                alert('Oops! That\'s not quite right. Try again.');
+            }
+        }
+    </script>
+</body>
+</html>

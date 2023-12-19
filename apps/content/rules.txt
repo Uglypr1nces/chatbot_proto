@@ -1,0 +1,4 @@
+1, to win, you have to win 100 points
+2, if you end up with less then 0 points, your pc will be destroyed
+3, you cant escape
+Good luck
