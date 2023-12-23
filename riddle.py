@@ -4,8 +4,6 @@ import datetime
 from playsound import playsound
 from time import sleep
 
-subprocess.run(["python","playsounds.py"])
-
 ascii_art = """
 W   W  III  L      L           K   K  OOO  M     M  EEEEE  N     N
 W   W   I   L      L           K  K   O   O MM   MM  E      NN    N
@@ -13,6 +11,7 @@ W W W   I   L      L           KKK    O   O M M M M  EEEE   N N   N
 W W W   I   L      L           K  K   O   O M  M  M  E      N  N  N
  W W   III  LLLLL  LLLLL  LLLLL K   K  OOO  M     M  EEEEE  N   N N
 """
+
 a = 1
 
 x = datetime.datetime.now()
