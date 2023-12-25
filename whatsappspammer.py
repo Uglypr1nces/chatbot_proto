@@ -2,7 +2,7 @@ import pyautogui as pt
 import time
 
 limit = input("Enter limit:")
-message = ("pictures/lawliet1.jpeg")
+message = ("lil nigga boy")
 i = 0
 
 while i < int(limit):
